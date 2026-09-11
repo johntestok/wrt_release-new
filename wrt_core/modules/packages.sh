@@ -8,7 +8,3 @@ source "$_MODULE_DIR/feed_source_fixes.sh"
 source "$_MODULE_DIR/package_source_updates.sh"
 source "$_MODULE_DIR/service_fixes.sh"
 unset _MODULE_DIR
-# 强制使用 sbwml 完整源
-rm -rf package/mosdns package/v2ray-geodata
-git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
-git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
