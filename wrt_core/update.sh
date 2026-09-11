@@ -139,11 +139,18 @@ stage_post_install_package_fixes() {
     # apply_hash_fixes
 }
 
+fixmosdns() {
+    rm -rf package/mosdns package/v2ray-geodata
+    git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+    git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+}
+
 main() {
     stage_repo_checkout
     stage_upstream_feeds_update
     stage_feed_source_cleanup
     stage_custom_feed_prepare
+    fixmosdns    
     stage_pre_install_source_fixes
     stage_feeds_install
     stage_post_install_package_fixes
