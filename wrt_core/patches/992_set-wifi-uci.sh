@@ -118,7 +118,7 @@ redmi_ax6_wifi_cfg() {
 }
 
 qihoo_360v6_wifi_cfg() {
-	configure_wifi 0 149 HE80 20 'Dodo-5G' '12345678'
+	configure_wifi 0 149 HE80 22 'Dodo-5G' '12345678'
 	configure_wifi 1 1 HE20 20 'Dodo' '12345678'
 }
 
